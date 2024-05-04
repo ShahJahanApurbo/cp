@@ -8,7 +8,6 @@ using namespace std;
 bool possible(vector<ll> a, ll n, ll c, ll mid)
 {
     ll sum = 0;
-
     for (ll i = 0; i < n; i++)
     {
         a[i] += 2 * mid;
