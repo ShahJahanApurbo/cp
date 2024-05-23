@@ -1,0 +1,32 @@
+cnt: 4
+0 0
+before check   s 1101010110
+1 1
+after check    s 1111110110
+cnt: 5
+0 1
+before check   s 1001001110
+0 1
+after check    s 1001001110
+0 0
+before check   s 1001001110
+1 1
+after check    s 1101101110
+0 1
+before check   s 1101101110
+0 1
+after check    s 1101101110
+0 0
+before check   s 1101101110
+1 1
+after check    s 1111111110
+cnt: 6
+0 0
+before check   s 000000
+1 1
+after check    s 101000
+0 0
+before check   s 101000
+1 1
+after check    s 111100
+cnt: 0
