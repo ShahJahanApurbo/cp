@@ -53,6 +53,7 @@ int main() {
                     first[i][j] = t[k];
                     first[i][j + 1] = '$';
                     f = 1;
+                  
                     break;
                 } else if (p[i][j] == nt[k]) {
                     first[i][j] = first[k][j];
