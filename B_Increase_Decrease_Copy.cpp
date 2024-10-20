@@ -36,6 +36,48 @@ typedef long double lld;
 
 void solve()
 {
+    int n;
+    cin >> n;
+    vector<int> v(n);
+    vector<int> v1(n + 1);
+    int mx = INT_MIN;
+    int mn = INT_MAX;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> v[i];
+        mn = min(mn, v[i]);
+    }
+    for (int i = 0; i < n + 1; i++)
+    {
+        cin >> v1[i];
+        if (i != n)
+            mx = max(mx, v1[i]);
+    }
+
+    int diff = INT_MAX;
+    int value = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (abs(v[i] - v1[n]) < diff)
+        {
+            diff = abs(v[i] - v1[n]);
+            value = v[i];
+        }
+    }
+    int ans = 0;
+    if (diff == 0)
+        ans += 1;
+    else if (mx > mn)
+    {
+        ans += diff;
+    }
+    else
+        ans += diff + 1;
+    for (int i = 0; i < n; i++)
+    {
+        ans += abs(v[i] - v1[i]);
+    }
+    cout << ans << nline;
 }
 
 int main()
@@ -44,7 +86,7 @@ int main()
     freopen("Error.txt", "w", stderr);
 #endif
 
-    ll t = 1;
+    int t = 1;
     cin >> t;
     while (t--)
     {

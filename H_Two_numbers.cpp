@@ -36,6 +36,12 @@ typedef long double lld;
 
 void solve()
 {
+    int a, b;
+    cin >> a >> b;
+
+    cout << "floor " << a << " / " << b << " = " << floor((double)a / b) << endl;
+    cout << "ceil " << a << " / " << b << " = " << ceil((double)a / b) << endl;
+    cout << "round " << a << " / " << b << " = " << round((double)a / b) << endl;
 }
 
 int main()
@@ -45,7 +51,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

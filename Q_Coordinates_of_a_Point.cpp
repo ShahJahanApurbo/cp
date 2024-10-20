@@ -36,6 +36,23 @@ typedef long double lld;
 
 void solve()
 {
+    double a, b;
+    cin >> a >> b;
+
+    if (a > 0 && b > 0)
+        cout << "Q1";
+    else if (a > 0 && b < 0)
+        cout << "Q4";
+    else if (a < 0 && b < 0)
+        cout << "Q3";
+    else if (a < 0 && b > 0)
+        cout << "Q2";
+    else if (a == 0 && b == 0)
+        cout << "Origem";
+    else if (a == 0)
+        cout << "Eixo Y";
+    else
+        cout << "Eixo X";
 }
 
 int main()
@@ -45,7 +62,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

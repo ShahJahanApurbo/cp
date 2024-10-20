@@ -34,7 +34,12 @@ typedef long double lld;
 #define debug(x)
 #endif
 
-void solve()
+// prime if it has only 3 divisors
+void T_prime(vector<ll> &v)
+{
+}
+
+void solve(vector<ll> &v)
 {
 }
 
@@ -43,11 +48,14 @@ int main()
 #ifndef ONLINE_JUDGE
     freopen("Error.txt", "w", stderr);
 #endif
+    vector<ll> v;
+    T_prime(v);
 
     ll t = 1;
     cin >> t;
+
     while (t--)
     {
-        solve();
+        solve(v);
     }
 }

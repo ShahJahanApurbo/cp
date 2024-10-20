@@ -36,6 +36,20 @@ typedef long double lld;
 
 void solve()
 {
+    ll n;
+    cin >> n;
+
+    if (n & 1) // Check if n is odd
+    {
+        cout << "YES" << endl;
+        return;
+    }
+
+    double log2_n = log2(n);
+    if (floor(log2_n) == log2_n)
+        cout << "NO" << endl;
+    else
+        cout << "YES" << endl;
 }
 
 int main()

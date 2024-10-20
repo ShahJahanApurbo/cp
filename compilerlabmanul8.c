@@ -1,6 +1,11 @@
-/* Calculate FIRST of a regular expression. */
+
 #include <stdio.h>
 #include <string.h>
+// E→TE′
+// E′→+TE′
+// T→FT′
+// T′→∗FT′
+// F→(E)
 
 int main() {
     char t[5], nt[10], p[5][5], first[5][5], temp;

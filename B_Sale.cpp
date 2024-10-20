@@ -36,6 +36,23 @@ typedef long double lld;
 
 void solve()
 {
+    int n, m;
+    cin >> n >> m;
+    vector<int> v(n);
+    int sum = 0;
+    for (int i = 0; i < n; i++)
+        cin >> v[i];
+
+    sort(v.begin(), v.end());
+    int cnt = 0;
+    for (int i = 0; i < m; i++)
+    {
+        if (v[i] < 0)
+            sum += v[i];
+        else
+            break;
+    }
+    cout << abs(sum) << endl;
 }
 
 int main()
@@ -45,7 +62,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

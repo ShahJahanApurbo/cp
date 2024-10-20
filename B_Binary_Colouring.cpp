@@ -22,7 +22,6 @@ using namespace std;
 typedef long long ll;
 typedef unsigned long long ull;
 typedef long double lld;
-// typedef tree<pair<int, int>, null_type, less<pair<int, int>>, rb_tree_tag, tree_order_statistics_node_update > pbds; // find_by_order, order_of_key
 
 #ifndef ONLINE_JUDGE
 #include "apurbo.h"
@@ -34,8 +33,45 @@ typedef long double lld;
 #define debug(x)
 #endif
 
+vector<ll> getResult(ll n)
+{
+    vector<ll> result;
+    while (n > 0)
+    {
+        if (!(n & 1))
+        {
+            result.push_back(0);
+            n = n / 2;
+        }
+        else
+        {
+            if (n % 4 == 1)
+            {
+                result.push_back(1);
+                n = (n - 1) / 2;
+            }
+            else
+            {
+                result.push_back(-1);
+                n = (n + 1) / 2;
+            }
+        }
+    }
+    return result;
+}
+
 void solve()
 {
+    ll n;
+    cin >> n;
+    vector<ll> result = getResult(n);
+
+    cout << result.size() << endl;
+    for (auto i : result)
+    {
+        cout << i << " ";
+    }
+    cout << endl;
 }
 
 int main()
@@ -44,7 +80,9 @@ int main()
     freopen("Error.txt", "w", stderr);
 #endif
 
-    ll t = 1;
+    fastio();
+
+    int t;
     cin >> t;
     while (t--)
     {

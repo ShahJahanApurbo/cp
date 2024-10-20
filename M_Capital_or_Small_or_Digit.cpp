@@ -36,6 +36,25 @@ typedef long double lld;
 
 void solve()
 {
+    char c;
+    cin >> c;
+
+    if (c - '0' <= 9)
+    {
+        cout << "IS DIGIT";
+    }
+    else
+    {
+        cout << "ALPHA" << endl;
+        if (c - 'A' <= 26)
+        {
+            cout << "IS CAPITAL";
+        }
+        else
+        {
+            cout << "IS SMALL";
+        }
+    }
 }
 
 int main()
@@ -45,7 +64,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

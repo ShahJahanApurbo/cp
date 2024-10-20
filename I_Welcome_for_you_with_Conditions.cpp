@@ -36,6 +36,12 @@ typedef long double lld;
 
 void solve()
 {
+    int a, b;
+    cin >> a >> b;
+    if (a >= b)
+        cout << "Yes";
+    else
+        cout << "No";
 }
 
 int main()
@@ -45,7 +51,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

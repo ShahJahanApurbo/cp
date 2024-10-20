@@ -36,6 +36,16 @@ typedef long double lld;
 
 void solve()
 {
+    int n;
+    cin >> n;
+
+    int years = n / 365;
+    n = n % 365;
+    int months = n / 30;
+    int days = n % 30;
+    cout << years << " years" << endl;
+    cout << months << " months" << endl;
+    cout << days << " days";
 }
 
 int main()
@@ -45,7 +55,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

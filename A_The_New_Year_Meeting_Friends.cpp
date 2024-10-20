@@ -36,6 +36,19 @@ typedef long double lld;
 
 void solve()
 {
+    int a[3];
+    int sum = 0;
+    for (int i = 0; i < 3; i++)
+    {
+
+        cin >> a[i];
+        sum += a[i];
+    }
+    sort(a, a + 3);
+    int ans1 = a[2] - a[1];
+    int ans2 = a[1] - a[0];
+
+    cout << ans1 + ans2;
 }
 
 int main()
@@ -45,7 +58,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

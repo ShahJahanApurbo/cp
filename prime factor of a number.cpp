@@ -36,6 +36,30 @@ typedef long double lld;
 
 void solve()
 {
+    ll n;
+    cin >> n;
+    map<ll,ll> m;
+    ll numberOfDivisors = 1;
+    if(n==1)
+    {
+        cout<<1<<" "<<1<<endl;
+        return;
+    }
+    for (int i = 2; i * i <= n; i++)
+    {
+        while (n % i == 0)
+        {
+            m[i]++;
+            n /= i;
+        }
+    }
+    if (n > 1)
+        m[n]++;
+    for (auto i : m)
+    {
+        numberOfDivisors = numberOfDivisors * (i.second+1);
+    }
+    cout<<numberOfDivisors<<" ";
 }
 
 int main()
@@ -45,7 +69,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

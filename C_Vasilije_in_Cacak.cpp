@@ -36,6 +36,15 @@ typedef long double lld;
 
 void solve()
 {
+    ll n, k, x;
+    cin >> n >> x >> k;
+
+    if (2 * k >= x * (x + 1) && 2 * k <= n * (n + 1) - (n - x) * (n - x + 1))
+    {
+        cout << "YES" << endl;
+        return;
+    }
+    cout << "NO" << endl;
 }
 
 int main()

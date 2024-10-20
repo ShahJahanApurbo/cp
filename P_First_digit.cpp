@@ -36,6 +36,16 @@ typedef long double lld;
 
 void solve()
 {
+    int n;
+    cin >> n;
+
+    n = n / 1000;
+    // cout << n;
+
+    if (n % 2 == 0)
+        cout << "EVEN";
+    else
+        cout << "ODD";
 }
 
 int main()
@@ -45,7 +55,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

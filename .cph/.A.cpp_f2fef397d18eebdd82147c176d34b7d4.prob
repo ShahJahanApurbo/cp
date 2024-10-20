@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"/home/apurba/cp/A.cpp","tests":[{"id":1720969757734,"input":"3\n6241\n8191\n0","output":"no\nyes\nno"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/apurba/cp/A.cpp","group":"local","local":true}

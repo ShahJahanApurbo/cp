@@ -36,6 +36,18 @@ typedef long double lld;
 
 void solve()
 {
+    int k, r;
+    cin >> k >> r;
+    int i = 1;
+    while (1)
+    {
+        if ((k * i) % 10 == 0 || (k * i) % 10 == r)
+        {
+            cout << i << nline;
+            return;
+        }
+        i++;
+    }
 }
 
 int main()
@@ -45,7 +57,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

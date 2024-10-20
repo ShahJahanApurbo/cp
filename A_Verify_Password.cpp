@@ -36,6 +36,51 @@ typedef long double lld;
 
 void solve()
 {
+    int n;
+    cin >> n;
+    string s;
+    cin >> s;
+    int flag = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (s[i] >= 'a' && s[i] <= 'z')
+        {
+            flag++;
+        }
+        else if (s[i] >= 'A' && s[i] <= 'Z')
+        {
+            cout << "NO" << endl;
+            return;
+        }
+        else if (flag && s[i] >= '0' && s[i] <= '9')
+        {
+            cout << "NO" << endl;
+            return;
+        }
+    }
+
+    vector<int> v;
+    vector<char> c;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (s[i] >= '0' && s[i] <= '9')
+        {
+            v.push_back(s[i] - '0');
+        }
+        else
+        {
+            c.push_back(s[i]);
+        }
+    }
+    if (is_sorted(v.begin(), v.end()) && is_sorted(c.begin(), c.end()))
+    {
+        cout << "YES" << endl;
+    }
+    else
+    {
+        cout << "NO" << endl;
+    }
 }
 
 int main()

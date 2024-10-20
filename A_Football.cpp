@@ -36,6 +36,24 @@ typedef long double lld;
 
 void solve()
 {
+    int n;
+    cin >> n;
+
+    unordered_map<string, int> ans;
+
+    int a;
+    while (n--)
+    {
+        string s;
+        cin >> s;
+        ans[s]++;
+        a = max(a, ans[s]);
+    }
+    for (auto it : ans)
+    {
+        if (it.second == a)
+            cout << it.first;
+    }
 }
 
 int main()
@@ -45,7 +63,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

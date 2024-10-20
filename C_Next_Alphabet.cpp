@@ -36,6 +36,10 @@ typedef long double lld;
 
 void solve()
 {
+    char a;
+    cin >> a;
+    int ans = (a + 1) % 97;
+    cout << char((ans % 26) + 97);
 }
 
 int main()
@@ -45,7 +49,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

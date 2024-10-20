@@ -36,6 +36,16 @@ typedef long double lld;
 
 void solve()
 {
+    int n, m;
+    cin >> n >> m;
+    if (min(n, m) % 2 == 0)
+    {
+        cout << "Malvika";
+    }
+    else
+    {
+        cout << "Akshat";
+    }
 }
 
 int main()
@@ -45,7 +55,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

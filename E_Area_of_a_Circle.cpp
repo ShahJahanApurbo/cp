@@ -36,6 +36,14 @@ typedef long double lld;
 
 void solve()
 {
+    double r;
+    cin >> r;
+
+    double PIE = 3.141592653;
+
+    double area = PIE * r * r;
+
+    cout << fixed << setprecision(9) << area;
 }
 
 int main()
@@ -45,7 +53,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

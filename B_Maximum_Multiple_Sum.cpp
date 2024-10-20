@@ -36,6 +36,30 @@ typedef long double lld;
 
 void solve()
 {
+    ll n;
+    cin >> n;
+
+    ll mx = 0, cur = 0, mxi = 1;
+
+    ll i = 1, j = 2;
+
+    while (i <= n)
+    {
+        while (j * i <= n)
+        {
+            if (mx < (j * (j + 1) / 2) * i)
+            {
+                mx = (j * (j + 1) / 2) * i;
+                mxi = i;
+            }
+            // cout << i << " " << j << " " << mx << " " << (j * (j + 1) / 2) * i << " " << mxi << endl;
+            j++;
+        }
+        j = 2;
+        i++;
+    }
+
+    cout << mxi << endl;
 }
 
 int main()

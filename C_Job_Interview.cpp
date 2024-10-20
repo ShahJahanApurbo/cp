@@ -36,6 +36,47 @@ typedef long double lld;
 
 void solve()
 {
+    int n, m;
+    cin >> n >> m;
+    vector<int> v1(n + m + 1);
+    vector<int> v2(n + m + 1);
+
+    vector<pair<pair<int, int>, bool>> v;
+
+    for (int i = 0; i < n + m + 1; i++)
+    {
+        cin >> v1[i];
+    }
+    for (int i = 0; i < n + m + 1; i++)
+    {
+        cin >> v2[i];
+    }
+
+    for (int i = 0; i < n + m + 1; i++)
+    {
+        v.push_back({{v1[i], v2[i]}, false});
+    }
+
+    for (int i = 0; i < n + m + 1; i++)
+    {
+        ll sum = 0;
+        sort(v.begin(), v.end(), [](pair<pair<int, int>, bool> a, pair<pair<int, int>, bool> b)
+             { return a.ff.ff > b.ff.ff; });
+        for (int i = 0; i < n; i++)
+        {
+            sum += v[i].ff.ff;
+            v[i].ss = true;
+        }
+        sort(v.begin(), v.end(), [](pair<pair<int, int>, bool> a, pair<pair<int, int>, bool> b)
+             { return a.ff.ss > b.ff.ss; });
+        for (int i = 0; i < m; i++)
+        {
+            if (!v[i].ss)
+                sum += v[i].ff.ss;
+        }
+        cout << sum << " ";
+    }
+    cout << nline;
 }
 
 int main()

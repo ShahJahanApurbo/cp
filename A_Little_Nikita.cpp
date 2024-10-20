@@ -36,6 +36,31 @@ typedef long double lld;
 
 void solve()
 {
+    int n, m;
+    cin >> n >> m;
+
+    if (n < m)
+    {
+        cout << "No" << endl;
+        return;
+    }
+    else if (n == m)
+    {
+        cout << "Yes" << endl;
+        return;
+    }
+    else
+    {
+        if ((n & 1 && m & 1) || (!(n & 1) && !(m & 1)))
+        {
+            cout << "Yes" << endl;
+            return;
+        }
+        else
+        {
+            cout << "No" << endl;
+        }
+    }
 }
 
 int main()

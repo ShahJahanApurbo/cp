@@ -36,6 +36,31 @@ typedef long double lld;
 
 void solve()
 {
+    int n,m;
+    set<int> s;
+    cin>>n>>m;
+    multiset<int>mx;
+    int prevx = 0;
+    s.insert(0);
+    s.insert(n);
+    mx.insert(n);
+    for(int i=0;i<m;i++)
+    {
+        int x;
+        cin>>x;
+        auto it = s.lower_bound(x);
+        int last = *(it);
+        it--;
+        int first = *(it);
+        s.insert(x);
+
+        mx.erase(mx.find(last-first));
+
+        mx.insert(x-first);
+        mx.insert(last-x);
+        cout<<*(--mx.end())<<" ";
+    }
+    
 }
 
 int main()
@@ -45,7 +70,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

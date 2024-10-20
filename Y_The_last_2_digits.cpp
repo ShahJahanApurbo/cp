@@ -36,6 +36,20 @@ typedef long double lld;
 
 void solve()
 {
+    ll a, b, c, d;
+    cin >> a >> b >> c >> d;
+
+    a %= 100;
+    b %= 100;
+    c %= 100;
+    d %= 100;
+
+    ll ans = (a * b * c * d) % 100;
+
+    if (ans < 10)
+        cout << 0 << ans;
+    else
+        cout << ans;
 }
 
 int main()
@@ -45,7 +59,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

@@ -36,6 +36,26 @@ typedef long double lld;
 
 void solve()
 {
+    vector<int> v;
+    multiset<int> sv;
+    for (int i = 0; i < 3; i++)
+    {
+        int x;
+        cin >> x;
+        v.push_back(x);
+        sv.insert(x);
+    }
+
+    for (auto e : sv)
+    {
+        cout << e << endl;
+    }
+    cout << endl;
+
+    for (auto e : v)
+    {
+        cout << e << endl;
+    }
 }
 
 int main()
@@ -45,7 +65,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

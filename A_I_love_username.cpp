@@ -36,6 +36,34 @@ typedef long double lld;
 
 void solve()
 {
+    int n;
+    cin >> n;
+    vector<int> a(n);
+    int min = INT_MAX, max = INT_MIN;
+    int ans = 0;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+        if (i == 0)
+        {
+            min = a[i];
+            max = a[i];
+        }
+        else
+        {
+            if (a[i] > max)
+            {
+                max = a[i];
+                ans++;
+            }
+            else if (a[i] < min)
+            {
+                min = a[i];
+                ans++;
+            }
+        }
+    }
+    cout << ans << nline;
 }
 
 int main()
@@ -45,7 +73,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

@@ -36,6 +36,11 @@ typedef long double lld;
 
 void solve()
 {
+    int n,m;
+    cin>>n>>m;
+
+    if(n%m==0 || m%n==0) cout<<"Multiples";
+    else cout<<"No Multiples";
 }
 
 int main()
@@ -45,7 +50,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

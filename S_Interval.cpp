@@ -36,6 +36,19 @@ typedef long double lld;
 
 void solve()
 {
+    double n;
+    cin >> n;
+
+    if (n >= 0 && n <= 25)
+        cout << "Interval [0,25]";
+    else if (n > 25 && n <= 50)
+        cout << "Interval (25,50]";
+    else if (n > 50 && n <= 75)
+        cout << "Interval (50,75]";
+    else if (n > 75 && n <= 100)
+        cout << "Interval (75,100]";
+    else
+        cout << "Out of Intervals";
 }
 
 int main()
@@ -45,7 +58,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

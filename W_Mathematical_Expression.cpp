@@ -36,6 +36,31 @@ typedef long double lld;
 
 void solve()
 {
+    int a, b, c;
+    char s, q;
+    cin >> a >> s >> b >> q >> c;
+
+    if (s == '+')
+    {
+        if (a + b == c)
+            cout << "Yes";
+        else
+            cout << a + b;
+    }
+    else if (s == '-')
+    {
+        if (a - b == c)
+            cout << "Yes";
+        else
+            cout << a - b;
+    }
+    else if (s == '*')
+    {
+        if (a * b == c)
+            cout << "Yes";
+        else
+            cout << a * b;
+    }
 }
 
 int main()
@@ -45,7 +70,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

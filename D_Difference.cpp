@@ -36,6 +36,12 @@ typedef long double lld;
 
 void solve()
 {
+    ll a, b, c, d;
+    cin >> a >> b >> c >> d;
+
+    ll dif = (a * b) - (c * d);
+
+    cout << "Difference = " << dif;
 }
 
 int main()
@@ -45,7 +51,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

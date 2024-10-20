@@ -36,6 +36,19 @@ typedef long double lld;
 
 void solve()
 {
+    char c;
+    cin >> c;
+
+    if (c - 'A' <= 26)
+    {
+        c = tolower(c);
+        cout << c;
+    }
+    else
+    {
+        c = toupper(c);
+        cout << c;
+    }
 }
 
 int main()
@@ -45,7 +58,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

@@ -34,20 +34,19 @@ typedef long double lld;
 #define debug(x)
 #endif
 
-void solve()
-{
-}
-
 int main()
 {
 #ifndef ONLINE_JUDGE
     freopen("Error.txt", "w", stderr);
 #endif
 
-    ll t = 1;
+    int t;
     cin >> t;
-    while (t--)
+
+    for (int i = 1; i <= t; i++)
     {
-        solve();
+        int a, b;
+        cin >> a >> b;
+        cout << "Case " << i << ": " << a + b << endl;
     }
 }

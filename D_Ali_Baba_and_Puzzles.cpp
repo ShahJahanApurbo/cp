@@ -36,16 +36,24 @@ typedef long double lld;
 
 void solve()
 {
+    ll a, b, c, d;
+    cin >> a >> b >> c >> d;
+
+    if (a + b * c == d || a + b - c == d || a * b + c == d || a * b - c == d || a - b * c == d || a - b + c == d)
+        cout << "YES" << nline;
+    else
+        cout << "NO" << nline;
 }
 
 int main()
 {
+    fastio();
 #ifndef ONLINE_JUDGE
     freopen("Error.txt", "w", stderr);
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();

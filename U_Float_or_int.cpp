@@ -36,6 +36,17 @@ typedef long double lld;
 
 void solve()
 {
+    double a;
+    cin >> a;
+
+    if (a - (int)a == 0)
+    {
+        cout << "int " << (int)a;
+    }
+    else
+    {
+        cout << "float " << (int)a << " " << a - (int)a;
+    }
 }
 
 int main()
@@ -45,7 +56,7 @@ int main()
 #endif
 
     ll t = 1;
-    cin >> t;
+    // cin >> t;
     while (t--)
     {
         solve();
